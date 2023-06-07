@@ -1,0 +1,14 @@
+<mat-horizontal-stepper linear="true" #stepper>
+  <mat-step
+    *ngFor="let step of stepList"
+    [completed]="step.completed"
+    [editable]="step.editable"
+    [label]="step.label"
+    [optional]="step.optional"
+  >
+    <ng-template [ngComponentOutlet]="step.component"></ng-template>
+    <common-botones-stepper
+      (reiniciarStepper)="stepper.reset()"
+    ></common-botones-stepper>
+  </mat-step>
+</mat-horizontal-stepper>
