@@ -1,0 +1,37 @@
+<mat-horizontal-stepper
+  #stepper
+  headerPosition="bottom"
+  linear="true"
+  labelPosition="bottom"
+>
+  <mat-step
+    [completed]="paso1Terminado"
+    editable="false"
+    optional="false"
+    label="paso 1"
+  >
+    <steps-step1 (terminado)="finPaso1($event)"></steps-step1>
+    <common-botones-stepper
+      (reiniciarStepper)="stepper.reset()"
+    ></common-botones-stepper>
+  </mat-step>
+
+  <mat-step
+    [completed]="paso2Terminado"
+    editable="false"
+    optional="true"
+    label="paso 2"
+  >
+    <steps-step2 (terminado)="finPaso2($event)"></steps-step2>
+    <common-botones-stepper
+      (reiniciarStepper)="stepper.reset()"
+    ></common-botones-stepper>
+  </mat-step>
+
+  <mat-step completed="false" editable="true" optional="false" label="paso 1">
+    <steps-step3></steps-step3>
+    <common-botones-stepper
+      (reiniciarStepper)="stepper.reset()"
+    ></common-botones-stepper>
+  </mat-step>
+</mat-horizontal-stepper>
