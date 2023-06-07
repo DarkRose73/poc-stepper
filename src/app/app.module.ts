@@ -15,6 +15,9 @@ import { Step2Component } from './components/steps/step2/step2.component';
 import { Step3Component } from './components/steps/step3/step3.component';
 import { BotonesStepperComponent } from './components/botones-stepper/botones-stepper.component';
 import { Stepperv2Component } from './components/stepperv2/stepperv2.component';
+import { Stepperv3Component } from './components/stepperv3/stepperv3.component';
+import { Step1v3Component } from './components/stepperv3/steps/step1v3/step1v3.component';
+import { Step2v3Component } from './components/stepperv3/steps/step2v3/step2v3.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { Stepperv2Component } from './components/stepperv2/stepperv2.component';
     Step3Component,
     BotonesStepperComponent,
     Stepperv2Component,
+    Stepperv3Component,
+    Step1v3Component,
+    Step2v3Component,
   ],
   imports: [
     BrowserModule,
